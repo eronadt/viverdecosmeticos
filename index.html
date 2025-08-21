@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Cosméticos - Encontre Seus Fornecedores</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1890180731827129');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=1890180731827129&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Facebook Pixel Code -->
+   <!-- Google tag (gtag.js) -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+   <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+
+     gtag('config', '');
+   </script>
+   <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "sbchjjdj5p");
+</script>
+</head>
+<body>
+    
+    <div id="quiz-container">
+        <!-- Tela Inicial -->
+        <div id="welcome-screen" class="screen active">
+            
+            <div class="hero-section">
+                <!-- Selo de credibilidade -->
+                <div class="credibility-badge">
+                    <span>🚀 Método 100% comprovado para começar do zero</span>
+                </div>
+                
+                <h2 class="hero-title">O SEGREDO PARA VIVER DE COSMÉTICOS</h2>
+                <p class="hero-subtitle">De acordo com o seu perfil e experiência</p>
+                
+                <div class="hero-image">
+                    <img src="images/woman-pink-dress-is-standing-front-shop-window.png" alt="Mulher em frente à loja de cosméticos">
+                </div>
+                
+                <div class="profile-options">
+                    <h3>Selecione o seu perfil para começar:</h3>
+                    <div class="profile-buttons">
+                        <button class="profile-btn" data-profile="beginner">
+                            <div class="profile-content">
+                                <span class="profile-title">Nunca revendi nada, mas quero começar</span>
+                            </div>
+                        </button>
+                        <button class="profile-btn" data-profile="tried">
+                            <div class="profile-content">
+                                <span class="profile-title">Já tentei vender, mas não deu certo</span>
+                            </div>
+                        </button>
+                        <button class="profile-btn" data-profile="online">
+                            <div class="profile-content">
+                                <span class="profile-title">Já vendo online, mas quero escalar</span>
+                            </div>
+                        </button>
+                        <button class="profile-btn" data-profile="advanced">
+                            <div class="profile-content">
+                                <span class="profile-title">Tenho loja física ou revendo direto</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Rodapé -->
+                <div class="footer">
+                    <p class="footer-text">Ao continuar, você concorda com nossos:</p>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Termos de uso</a>
+                        <span class="footer-separator">|</span>
+                        <a href="#" class="footer-link">Política de privacidade</a>
+                    </div>
+                    <p class="footer-copyright">© 2025 - Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Questions -->
+        <div id="quiz-questions" class="screen">
+            <div class="progress-bar">
+                <div id="progress-text">Passo 1 de 7</div>
+                <div id="progress-fill"></div>
+            </div>
+
+
+
+            <!-- Question 1: Investimento -->
+            <div class="question-screen active" data-question="1">
+                <h2 class="question-title">Qual valor você pode investir inicialmente?</h2>
+                <p class="question-subtitle">Arraste o slider para selecionar o valor exato</p>
+                
+                <div class="slider-container">
+                    <div class="slider-value-display">
+                        <span id="slider-value">R$ 600</span>
+                    </div>
+                    
+                    <div class="slider-wrapper">
+                        <input type="range" id="investment-slider" min="100" max="10000" value="600" step="50" class="slider">
+                        <div class="slider-track">
+                            <div class="slider-fill"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="slider-labels">
+                        <span class="slider-min">R$ 100</span>
+                        <span class="slider-max">R$ 10.000</span>
+                    </div>
+                    
+                    <div class="slider-presets">
+                        <button class="preset-btn" data-value="500">R$ 500</button>
+                        <button class="preset-btn" data-value="1000">R$ 1.000</button>
+                        <button class="preset-btn" data-value="2000">R$ 2.000</button>
+                        <button class="preset-btn" data-value="5000">R$ 5.000</button>
+                    </div>
+                    
+                    <button id="continue-investment" class="cta-button">
+                        <span>Continuar</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Question 2: Produtos -->
+            <div class="question-screen" data-question="2">
+                <h2 class="question-title">Que tipo de produtos te interessa mais?</h2>
+                <p class="question-subtitle">Escolha todos que se aplicarem</p>
+                
+                <div class="answer-options multiple">
+                    <button class="answer-btn" data-value="maquiagem">
+                        <i class="fas fa-palette"></i>
+                        <span class="answer-title">Maquiagem</span>
+                    </button>
+                    <button class="answer-btn" data-value="skincare">
+                        <i class="fas fa-spa"></i>
+                        <span class="answer-title">Skincare</span>
+                    </button>
+                    <button class="answer-btn" data-value="perfumes">
+                        <i class="fas fa-spray-can"></i>
+                        <span class="answer-title">Perfumes</span>
+                    </button>
+                    <button class="answer-btn" data-value="cabelo">
+                        <i class="fas fa-cut"></i>
+                        <span class="answer-title">Produtos para cabelo</span>
+                    </button>
+                    <button class="answer-btn" data-value="unhas">
+                        <i class="fas fa-hand-sparkles"></i>
+                        <span class="answer-title">Produtos para unhas</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Question 3: Medos -->
+            <div class="question-screen" data-question="3">
+                <h2 class="question-title">Qual é o seu maior medo ao começar?</h2>
+                <p class="question-subtitle">Selecione o que mais te preocupa</p>
+                
+                <div class="answer-options">
+                    <button class="answer-btn" data-value="falta-experiencia">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div class="answer-content">
+                            <span class="answer-title">Falta de experiência</span>
+                            <span class="answer-description">Não sei por onde começar</span>
+                        </div>
+                    </button>
+                    <button class="answer-btn" data-value="investimento-perdido">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <div class="answer-content">
+                            <span class="answer-title">Perder dinheiro</span>
+                            <span class="answer-description">Medo de não ter retorno</span>
+                        </div>
+                    </button>
+                    <button class="answer-btn" data-value="concorrencia">
+                        <i class="fas fa-users"></i>
+                        <div class="answer-content">
+                            <span class="answer-title">Muita concorrência</span>
+                            <span class="answer-description">Achar que o mercado está saturado</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Question 4: Tempo -->
+            <div class="question-screen" data-question="4">
+                <h2 class="question-title">Quanto tempo você pode dedicar por semana?</h2>
+                <p class="question-subtitle">Seja realista com sua disponibilidade</p>
+                
+                <div class="answer-options">
+                    <button class="answer-btn" data-value="2-5-horas">
+                        <i class="fas fa-clock"></i>
+                        <div class="answer-content">
+                            <span class="answer-title">2-5 horas</span>
+                            <span class="answer-description">Tenho pouco tempo disponível</span>
+                        </div>
+                    </button>
+                    <button class="answer-btn" data-value="5-10-horas">
+                        <i class="fas fa-calendar-week"></i>
+                        <div class="answer-content">
+                            <span class="answer-title">5-10 horas</span>
+                            <span class="answer-description">Posso dedicar algumas horas por dia</span>
+                        </div>
+                    </button>
+                    <button class="answer-btn" data-value="10-horas">
+                        <i class="fas fa-calendar-alt"></i>
+                        <div class="answer-content">
+                            <span class="answer-title">10+ horas</span>
+                            <span class="answer-description">Posso dedicar bastante tempo</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Question 5: Expectativa de Lucro -->
+            <div class="question-screen" data-question="5">
+                <h2 class="question-title">Quando você gostaria de lucrar por mês vendendo cosméticos?</h2>
+                <p class="question-subtitle">Arraste o slider para selecionar sua meta mensal</p>
+                
+                <div class="slider-container">
+                    <div class="slider-value-display">
+                        <span id="profit-slider-value">R$ 1.500</span>
+                    </div>
+                    
+                    <div class="slider-wrapper">
+                        <input type="range" id="profit-slider" min="500" max="10000" value="1500" step="100" class="slider">
+                        <div class="slider-track">
+                            <div class="slider-fill"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="slider-labels">
+                        <span class="slider-min">R$ 500</span>
+                        <span class="slider-max">R$ 10.000</span>
+                    </div>
+                    
+                    <div class="slider-presets">
+                        <button class="preset-btn" data-value="1000">R$ 1.000</button>
+                        <button class="preset-btn" data-value="2000">R$ 2.000</button>
+                        <button class="preset-btn" data-value="3000">R$ 3.000</button>
+                        <button class="preset-btn" data-value="5000">R$ 5.000</button>
+                    </div>
+                    
+                    <button id="continue-profit" class="cta-button">
+                        <span>Continuar</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Question 6: Localização -->
+            <div class="question-screen" data-question="6">
+                <h2 class="question-title">Como você pretende vender?</h2>
+                <p class="question-subtitle">Escolha todos os canais que pretende usar</p>
+                
+                <div class="answer-options multiple">
+                    <button class="answer-btn" data-value="instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span class="answer-title">Instagram</span>
+                    </button>
+                    <button class="answer-btn" data-value="facebook">
+                        <i class="fab fa-facebook"></i>
+                        <span class="answer-title">Facebook</span>
+                    </button>
+                    <button class="answer-btn" data-value="whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        <span class="answer-title">WhatsApp</span>
+                    </button>
+                    <button class="answer-btn" data-value="loja-fisica">
+                        <i class="fas fa-store"></i>
+                        <span class="answer-title">Loja física</span>
+                    </button>
+                    <button class="answer-btn" data-value="marketplace">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="answer-title">Marketplace</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Question 7: Nome -->
+            <div class="question-screen" data-question="7">
+                <h2 class="question-title">Qual o seu nome?</h2>
+                <p class="question-subtitle">Vamos personalizar seu plano</p>
+                
+                <div class="input-section">
+                    <input type="text" id="user-name" placeholder="Digite seu nome completo" class="form-input">
+                </div>
+            </div>
+
+
+
+            <button id="next-question" class="cta-button" disabled>
+                <span>Avançar</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+            
+            <!-- Rodapé -->
+            <div class="footer">
+                <p class="footer-text">Ao continuar, você concorda com nossos:</p>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Termos de uso</a>
+                    <span class="footer-separator">|</span>
+                    <a href="#" class="footer-link">Política de privacidade</a>
+                </div>
+                <p class="footer-copyright">© 2025 - Todos os direitos reservados.</p>
+            </div>
+        </div>
+
+        <!-- Credibility Screen -->
+        <div id="credibility-screen" class="screen">
+            <div class="credibility-content">
+                <h2>As melhores marcas de cosméticos estão na nossa lista</h2>
+                <p class="credibility-subtitle">Fornecedores verificados e aprovados por milhares de revendedoras</p>
+                
+                <div class="brands-grid">
+                    <!-- Coluna 1 -->
+                    <div class="brand-column">
+                        <div class="brand-card">
+                            <div class="brand-logo">
+                                <img src="images/MAC.png" alt="MAC">
+                            </div>
+                            <div class="brand-header">
+                                <h3>MAC</h3>
+                                <i class="fas fa-check-circle verification-icon"></i>
+                            </div>
+                            <p>Maquiagem profissional com alta margem de lucro</p>
+                        </div>
+                        
+                        <div class="brand-card">
+                            <div class="brand-logo">
+                                <img src="images/Fenty Beauty.png" alt="Fenty Beauty">
+                            </div>
+                            <div class="brand-header">
+                                <h3>Fenty Beauty</h3>
+                                <i class="fas fa-check-circle verification-icon"></i>
+                            </div>
+                            <p>Cosméticos inclusivos com alta demanda</p>
+                        </div>
+                        
+                        <div class="brand-card">
+                            <div class="brand-logo">
+                                <img src="images/NARS.png" alt="NARS">
+                            </div>
+                            <div class="brand-header">
+                                <h3>NARS</h3>
+                                <i class="fas fa-check-circle verification-icon"></i>
+                            </div>
+                            <p>Produtos de luxo com excelente rotatividade</p>
+                        </div>
+                        
+                        <div class="brand-card">
+                            <div class="brand-logo">
+                                <img src="images/Too Faced.png" alt="Too Faced">
+                            </div>
+                            <div class="brand-header">
+                                <h3>Too Faced</h3>
+                                <i class="fas fa-check-circle verification-icon"></i>
+                            </div>
+                            <p>Maquiagem colorida e paletas cobiçadas</p>
+                        </div>
+                        
+                        <div class="brand-card">
+                            <div class="brand-logo">
+                                <img src="images/Maybelline New York.png" alt="Maybelline">
+                            </div>
+                            <div class="brand-header">
+                                <h3>Maybelline</h3>
+                                <i class="fas fa-check-circle verification-icon"></i>
+                            </div>
+                            <p>Marca acessível com alta demanda</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Coluna 2 -->
+                    <div class="brand-column">
+                        <div class="brand-card">
+                            <div class="brand-logo">
+                                <img src="images/Vult.png" alt="Vult">
+                            </div>
+                            <div class="brand-header">
+                                <h3>Vult</h3>
+                                <i class="fas fa-check-circle verification-icon"></i>
+                            </div>
+                            <p>Marca brasileira com produtos de qualidade</p>
+                        </div>
+                        
+                        <div class="brand-card">
+                            <div class="brand-logo">
+                                <img src="images/Quem Disse, Berenice.png" alt="Quem Disse, Berenice">
+                            </div>
+                            <div class="brand-header">
+                                <h3>Quem Disse, Berenice</h3>
+                                <i class="fas fa-check-circle verification-icon"></i>
+                            </div>
+                            <p>Cosméticos nacionais com boa margem</p>
+                        </div>
+                        
+                        <div class="brand-card">
+                            <div class="brand-logo">
+                                <img src="images/fran by franciny ehlke.png" alt="Fran by Franciny Ehlke">
+                            </div>
+                            <div class="brand-header">
+                                <h3>Fran by Franciny Ehlke</h3>
+                                <i class="fas fa-check-circle verification-icon"></i>
+                            </div>
+                            <p>Marca brasileira com produtos exclusivos</p>
+                        </div>
+                        
+                        <div class="brand-card">
+                            <div class="brand-logo">
+                                <img src="images/Dailus.webp" alt="Dailus">
+                            </div>
+                            <div class="brand-header">
+                                <h3>Dailus</h3>
+                                <i class="fas fa-check-circle verification-icon"></i>
+                            </div>
+                            <p>Produtos de beleza com alta qualidade</p>
+                        </div>
+                        
+                        <div class="brand-card">
+                            <div class="brand-logo">
+                                <img src="images/Ruby Rose.webp" alt="Ruby Rose">
+                            </div>
+                            <div class="brand-header">
+                                <h3>Ruby Rose</h3>
+                                <i class="fas fa-check-circle verification-icon"></i>
+                            </div>
+                            <p>Marca brasileira com produtos veganos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="credibility-stats">
+                    <div class="stats-box">
+                        <div class="stat-item">
+                            <span class="stat-number">+500</span>
+                            <span class="stat-label">Marcas Verificadas</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">+50K</span>
+                            <span class="stat-label">Produtos Disponíveis</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">+782K</span>
+                            <span class="stat-label">Clientes Satisfeitos</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <button id="continue-credibility" class="cta-button">
+                    <span>Continuar</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                
+                <!-- Rodapé -->
+                <div class="footer">
+                    <p class="footer-text">Ao continuar, você concorda com nossos:</p>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Termos de uso</a>
+                        <span class="footer-separator">|</span>
+                        <a href="#" class="footer-link">Política de privacidade</a>
+                    </div>
+                    <p class="footer-copyright">© 2025 - Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Screen -->
+        <div id="loading-screen" class="screen">
+            
+            <div class="loading-content">
+                <h2>Analisando suas respostas...</h2>
+                
+                <div class="loading-steps">
+                    <div class="loading-step active">
+                        <span>Analisando perfil</span>
+                        <div class="step-progress">
+                            <div class="step-fill"></div>
+                        </div>
+                        <span class="step-percentage">80%</span>
+                    </div>
+                    <div class="loading-step">
+                        <span>Calculando potencial de lucro</span>
+                        <div class="step-progress">
+                            <div class="step-fill"></div>
+                        </div>
+                        <span class="step-percentage">0%</span>
+                    </div>
+                    <div class="loading-step">
+                        <span>Ajustando fornecedores</span>
+                        <div class="step-progress">
+                            <div class="step-fill"></div>
+                        </div>
+                        <span class="step-percentage">0%</span>
+                    </div>
+                    <div class="loading-step">
+                        <span>Criando plano personalizado</span>
+                        <div class="step-progress">
+                            <div class="step-fill"></div>
+                        </div>
+                        <span class="step-percentage">0%</span>
+                    </div>
+                </div>
+
+                <p class="client-confidence">Com a confiança de 289.897 clientes</p>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Consegui encontrar fornecedores incríveis e já estou lucrando R$ 2.500 por mês!"</p>
+                    <div class="testimonial-author">
+                        <img src="/images/d1.webp" alt="Maria Silva">
+                        <span>Maria Silva</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" style="display: none;">
+                    <div class="stars">★★★★★</div>
+                    <p>"Comecei do zero e hoje tenho uma renda extra de R$ 3.000 por mês!"</p>
+                    <div class="testimonial-author">
+                        <img src="/images/d2.webp" alt="Fernanda Lima">
+                        <span>Fernanda Lima</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" style="display: none;">
+                    <div class="stars">★★★★★</div>
+                    <p>"Os fornecedores são incríveis! Qualidade e preços imbatíveis."</p>
+                    <div class="testimonial-author">
+                        <img src="/images/d3.webp" alt="Ana Costa">
+                        <span>Ana Costa</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" style="display: none;">
+                    <div class="stars">★★★★★</div>
+                    <p>"Em apenas 1 mês consegui lucrar R$ 1.200 vendendo cosméticos!"</p>
+                    <div class="testimonial-author">
+                        <img src="/images/d4.webp" alt="Juliana Santos">
+                        <span>Juliana Santos</span>
+                    </div>
+                </div>
+                
+                <!-- Rodapé -->
+                <div class="footer">
+                    <p class="footer-text">Ao continuar, você concorda com nossos:</p>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Termos de uso</a>
+                        <span class="footer-separator">|</span>
+                        <a href="#" class="footer-link">Política de privacidade</a>
+                    </div>
+                    <p class="footer-copyright">© 2025 - Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Offer Screen -->
+        <div id="offer-screen" class="screen">
+            <div class="offer-content">
+                <!-- Header principal melhorado -->
+                <div class="offer-header">
+                    <div class="offer-badge">
+                        <i class="fas fa-star"></i>
+                        <span>OFERTA EXCLUSIVA</span>
+                    </div>
+                    <h2>🚀 Transforme R$ <span id="user-investment-header">600</span> em R$ <span id="total-profit-header">3.840</span> em 4 meses!</h2>
+                    <p class="offer-subtitle">Descubra como <strong>2.847 pessoas</strong> já começaram a lucrar com cosméticos usando nosso método comprovado</p>
+                </div>
+
+                <!-- Projeção de lucro dos 4 meses -->
+                <div class="profit-projection-card">
+                    <h3>💸 Sua jornada para a liberdade financeira</h3>
+                    <p class="projection-subtitle">Veja como seu investimento de R$ <span id="user-investment">600</span> se multiplica mês após mês:</p>
+                    
+                    <div class="profit-months-grid">
+                        <div class="month-card">
+                            <div class="month-header">
+                                <span class="month-number">1º</span>
+                                <span class="month-label">Mês</span>
+                            </div>
+                            <div class="profit-amount">R$ <span id="month1-profit">180</span></div>
+                            <div class="profit-percentage">+30%</div>
+                            <div class="profit-bar">
+                                <div class="profit-fill" style="width: 8%"></div>
+                            </div>
+                            <div class="month-benefit">Primeiros clientes</div>
+                        </div>
+                        
+                        <div class="month-card">
+                            <div class="month-header">
+                                <span class="month-number">2º</span>
+                                <span class="month-label">Mês</span>
+                            </div>
+                            <div class="profit-amount">R$ <span id="month2-profit">480</span></div>
+                            <div class="profit-percentage">+80%</div>
+                            <div class="profit-bar">
+                                <div class="profit-fill" style="width: 21%"></div>
+                            </div>
+                            <div class="month-benefit">Clientes recorrentes</div>
+                        </div>
+                        
+                        <div class="month-card">
+                            <div class="month-header">
+                                <span class="month-number">3º</span>
+                                <span class="month-label">Mês</span>
+                            </div>
+                            <div class="profit-amount">R$ <span id="month3-profit">900</span></div>
+                            <div class="profit-percentage">+150%</div>
+                            <div class="profit-bar">
+                                <div class="profit-fill" style="width: 39%"></div>
+                            </div>
+                            <div class="month-benefit">Indicações crescem</div>
+                        </div>
+                        
+                        <div class="month-card highlight">
+                            <div class="month-header">
+                                <span class="month-number">4º</span>
+                                <span class="month-label">Mês</span>
+                            </div>
+                            <div class="profit-amount">R$ <span id="month4-profit">2.280</span></div>
+                            <div class="profit-percentage">+380%</div>
+                            <div class="profit-bar">
+                                <div class="profit-fill" style="width: 100%"></div>
+                            </div>
+                            <div class="month-benefit">Negócio escalado</div>
+                        </div>
+                    </div>
+                    
+                    <div class="total-profit-summary">
+                        <div class="total-profit-item">
+                            <span class="total-label">💰 Lucro total em 4 meses:</span>
+                            <span class="total-value">R$ <span id="total-4months-profit">3.840</span></span>
+                        </div>
+                        <div class="roi-item">
+                            <span class="roi-label">📈 ROI médio:</span>
+                            <span class="roi-value">+160% ao mês</span>
+                        </div>
+                        <div class="freedom-item">
+                            <span class="freedom-label">Resultado:</span>
+                            <span class="freedom-value">Liberdade financeira em 4 meses!</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social proof melhorado -->
+                <div class="social-proof-card">
+                    <h3>✅ Mais de 2.847 pessoas já transformaram suas vidas</h3>
+                    <div class="testimonials-preview">
+                        <div class="testimonial-preview">
+                            <div class="testimonial-avatar">
+                                <img src="images/d5.webp" alt="Maria Silva">
+                            </div>
+                            <div class="testimonial-content">
+                                <p>"Em 3 meses já lucrei R$ 1.200! Melhor investimento da minha vida!"</p>
+                                <span class="testimonial-author">Juliana Sampaio, 28 anos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cards dos itens entregues melhorados -->
+                <div class="offer-items">
+                    <div class="offer-item main-product">
+                        <div class="item-icon">
+                            <i class="fas fa-list"></i>
+                        </div>
+                        <div class="item-content">
+                            <h3>📋 Lista Premium de Fornecedores</h3>
+                            <p><strong>100+ fornecedores verificados</strong> direto da fábrica com preços de atacado que você só encontra aqui</p>
+                            <div class="item-price">
+                                <span class="original-price">R$ 97,00</span>
+                                <span class="current-price">R$ 17,90</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offer-item bonus">
+                        <div class="bonus-badge">BÔNUS</div>
+                        <div class="item-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="item-content">
+                            <h3>💄 Guia de Maquiagens Premium</h3>
+                            <p><strong>50 fornecedores especializados</strong> em maquiagens de alta qualidade</p>
+                            <div class="item-price">
+                                <span class="original-price">R$ 37,00</span>
+                                <span class="bonus-price">GRÁTIS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offer-item bonus">
+                        <div class="bonus-badge">BÔNUS</div>
+                        <div class="item-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="item-content">
+                            <h3>📚 Curso de Vendas Avançado</h3>
+                            <p><strong>Estratégias comprovadas</strong> para vender mais e fidelizar clientes</p>
+                            <div class="item-price">
+                                <span class="original-price">R$ 67,00</span>
+                                <span class="bonus-price">GRÁTIS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offer-item bonus">
+                        <div class="bonus-badge">BÔNUS</div>
+                        <div class="item-icon">
+                            <span style="font-size: 24px;">🎯</span>
+                        </div>
+                        <div class="item-content">
+                            <h3>🎯 Plano de Ação Detalhado</h3>
+                            <p><strong>Passo a passo completo</strong> para começar a lucrar hoje mesmo</p>
+                            <div class="item-price">
+                                <span class="original-price">R$ 27,00</span>
+                                <span class="bonus-price">GRÁTIS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offer-item bonus">
+                        <div class="bonus-badge">BÔNUS</div>
+                        <div class="item-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="item-content">
+                            <h3>📱 Templates Prontos para Venda</h3>
+                            <p><strong>Modelos profissionais</strong> para WhatsApp e Instagram que convertem</p>
+                            <div class="item-price">
+                                <span class="original-price">R$ 24,00</span>
+                                <span class="bonus-price">GRÁTIS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Escassez e urgência melhorada -->
+                <div class="urgency-card enhanced">
+                    <div class="urgency-header">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <span>ATENÇÃO: ÚLTIMAS VAGAS DISPONÍVEIS</span>
+                    </div>
+                    <div class="countdown-timer">
+                        <div class="timer-display" id="urgency-timer">05:00</div>
+                    </div>
+                </div>
+
+                <!-- Garantia melhorada -->
+                <div class="guarantee-offer-card">
+                    <div class="guarantee-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="guarantee-content">
+                        <h3>✅ Garantia incondicional de 90 dias</h3>
+                        <p>Se você não lucrar pelo menos R$ 500 no primeiro mês, devolvemos 100% do seu dinheiro via PIX. Sem perguntas, sem burocracia.</p>
+                    </div>
+                </div>
+
+                <!-- Valor total melhorado -->
+                <div class="total-value-card">
+                    <div class="total-row">
+                        <span class="total-label">Valor total do pacote:</span>
+                        <span class="total-original">R$ 252,00</span>
+                    </div>
+                    <div class="total-row highlight">
+                        <span class="total-label">Preço especial hoje:</span>
+                        <span class="total-final">R$ 14,90</span>
+                    </div>
+                    <div class="total-savings">
+                        <span>🎉 Você economiza R$ 237,10 (93% de desconto)</span>
+                    </div>
+                    <div class="investment-return">
+                        <span>💡 Com apenas R$ 14,90 você pode lucrar R$ <span id="return-investment">3.840</span> em 4 meses!</span>
+                    </div>
+                </div>
+
+                <!-- Botão CTA principal -->
+                <div class="main-cta-section">
+                    <button id="select-plan" class="cta-button offer-cta">
+                        <span>🚀 QUERO GARANTIR MINHA VAGA AGORA!</span>
+                        <i class="fas fa-lock"></i>
+                    </button>
+                    <p class="cta-subtitle">⚡ Acesso imediato • 🔒 Pagamento seguro • ✅ Garantia de 90 dias</p>
+                </div>
+
+                <!-- Entrega imediata melhorada -->
+                <div class="delivery-card">
+                    <div class="delivery-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="delivery-content">
+                        <h3>⚡ Acesso imediato e vitalício</h3>
+                        <p>Você recebe tudo por WhatsApp + Email assim que o pagamento for aprovado. Acesso vitalício a todas as atualizações.</p>
+                    </div>
+                </div>
+                
+                <!-- Rodapé -->
+                <div class="footer">
+                    <p class="footer-text">Ao continuar, você concorda com nossos:</p>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Termos de uso</a>
+                        <span class="footer-separator">|</span>
+                        <a href="#" class="footer-link">Política de privacidade</a>
+                    </div>
+                    <p class="footer-copyright">© 2025 - Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Checkout Screen -->
+        <div id="checkout-screen" class="screen">
+            
+            <div class="checkout-content">
+                <h2>Finalizar Compra</h2>
+                
+                <!-- Selo de segurança -->
+                <div class="secure-checkout-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <div class="secure-text">
+                        <div class="secure-title">COMPRA SEGURA</div>
+                        <div class="secure-subtitle">SSL ENCRYPTION</div>
+                    </div>
+                </div>
+                
+                <div class="selected-plan-summary">
+                    <h3>Plano Selecionado: <span id="selected-plan-name">PLANO PROFISSIONAL</span></h3>
+                    <div class="plan-summary-price">
+                        <span class="original-price">R$ 35,80</span>
+                        <span class="current-price">R$ 17,90</span>
+                    </div>
+                </div>
+
+                <form id="checkout-form" class="checkout-form">
+                    <div class="form-group">
+                        <label for="checkout-name">Nome Completo</label>
+                        <input type="text" id="checkout-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="checkout-email">E-mail</label>
+                        <input type="email" id="checkout-email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="checkout-phone">WhatsApp</label>
+                        <input type="tel" id="checkout-phone" required>
+                    </div>
+
+                    <button type="submit" class="cta-button secure-checkout-btn">
+                        <i class="fas fa-lock"></i>
+                        <span>Desbloquear Acesso com Garantia</span>
+                        <div class="checkout-price">R$ <span id="checkout-price">17,90</span></div>
+                    </button>
+                </form>
+
+                <!-- Garantia de 7 dias -->
+                <div class="guarantee-banner">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                        <h4>Garantia de 7 dias</h4>
+                        <p>Se não tiver resultados, devolvemos seu PIX</p>
+                    </div>
+                </div>
+
+                <!-- Meios de pagamento -->
+                <div class="payment-methods-checkout">
+                    <h4>Formas de pagamento aceitas:</h4>
+                    <div class="payment-icons">
+                        <div class="payment-icon">
+                            <i class="fas fa-qrcode"></i>
+                            <span>PIX</span>
+                        </div>
+                        <div class="payment-icon">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Cartão</span>
+                        </div>
+                        <div class="payment-icon">
+                            <i class="fas fa-barcode"></i>
+                            <span>Boleto</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Rodapé -->
+                <div class="footer">
+                    <p class="footer-text">Ao continuar, você concorda com nossos:</p>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Termos de uso</a>
+                        <span class="footer-separator">|</span>
+                        <a href="#" class="footer-link">Política de privacidade</a>
+                    </div>
+                    <p class="footer-copyright">© 2025 - Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Success Screen -->
+        <div id="success-screen" class="screen">
+            
+            <div class="success-content">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                
+                <h2>Parabéns! Seu acesso foi liberado!</h2>
+                <p>Você receberá um e-mail com todos os detalhes do seu plano personalizado</p>
+                
+                <div class="next-steps">
+                    <h3>Próximos passos:</h3>
+                    <ul>
+                        <li>✓ Verifique seu e-mail (incluindo spam)</li>
+                        <li>✓ Acesse sua área de membros</li>
+                        <li>✓ Comece a explorar os fornecedores</li>
+                        <li>✓ Implemente as estratégias sugeridas</li>
+                    </ul>
+                </div>
+
+                <div class="social-proof">
+                    <h3>Junte-se a mais de 10.000 revendedoras</h3>
+                    <div class="testimonials-grid">
+                        <div class="testimonial-item">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=50&h=50&fit=crop&crop=face" alt="Cliente">
+                            <p>"Comecei há 3 meses e já lucro R$ 2.500/mês!"</p>
+                        </div>
+                        <div class="testimonial-item">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop&crop=face" alt="Cliente">
+                            <p>"Os fornecedores são incríveis, qualidade garantida!"</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Rodapé -->
+                <div class="footer">
+                    <p class="footer-text">Ao continuar, você concorda com nossos:</p>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Termos de uso</a>
+                        <span class="footer-separator">|</span>
+                        <a href="#" class="footer-link">Política de privacidade</a>
+                    </div>
+                    <p class="footer-copyright">© 2025 - Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html> 
